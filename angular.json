@@ -17,8 +17,10 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "baseHref": "",
-            "outputPath": "dist/three-blog",
+            "ssr": false,
+            
+            "baseHref": "/three-blog/",
+            "outputPath": "docs",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
