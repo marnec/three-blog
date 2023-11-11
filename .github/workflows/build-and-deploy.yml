@@ -28,8 +28,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: debug
+      - name: pwd
         run: pwd
+      - name: ls
         run: ls -la
 
       - name: Deploy to GitHub Pages
