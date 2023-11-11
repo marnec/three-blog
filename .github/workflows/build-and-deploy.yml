@@ -31,7 +31,6 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.4.3
         with:
-          folder: docs
           token: ${{ secrets.TOKEN }}
           branch: main
           folder: docs # Change this to the path of your Angular app build output
