@@ -22,7 +22,10 @@ jobs:
         run: npm install
 
       - name: Build Angular App
-        run: npm run build
+        run: npm run build --
+
+      - name: ls
+        run: ls -la
 
   deploy:
     runs-on: ubuntu-latest
