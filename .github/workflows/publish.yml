@@ -17,7 +17,7 @@ jobs:
         build_configuration: production # The build environment for the app. please look configurations in your angular.json
         base_href: https://marnec.github.io/three-blog   # make sure this corresponds to https://<your_username>.github.io/<base_href>/
         deploy_branch: main 
-        angular_dist_build_folder: ./dist/three-blog 
+        # angular_dist_build_folder: ./dist/three-blog 
 
 permissions:
   contents: write # Allow write permission to GITHUB_TOKEN to commit to deploy branch.
