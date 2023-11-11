@@ -31,5 +31,5 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
-          branch: main # Change this to your GitHub Pages branch
+          branch: gh-pages # Change this to your GitHub Pages branch
           folder: docs/three-blog # Change this to the path of your Angular app build output
