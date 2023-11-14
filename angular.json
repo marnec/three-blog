@@ -17,6 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "baseHref": "/three-blog/",
             "outputPath": "docs",
             "index": "src/index.html",
             "browser": "src/main.ts",
@@ -29,7 +30,7 @@
           },
           "configurations": {
             "production": {
-              "baseHref": "/three-blog/",
+              
               "budgets": [
                 {
                   "type": "initial",
