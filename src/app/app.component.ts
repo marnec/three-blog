@@ -9,9 +9,6 @@ import { OrbitCtrlComponent } from './orbit-ctrl/orbit-ctrl.component';
   standalone: true,
   imports: [CommonModule, RouterOutlet, MarkdownModule, OrbitCtrlComponent],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
-
-  title = 'three-blog';
-}
+export class AppComponent {}
