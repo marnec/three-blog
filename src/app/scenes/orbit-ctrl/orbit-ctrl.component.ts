@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Input, ViewChild } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {
   AmbientLight,
@@ -18,7 +18,7 @@ import {
 } from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer.js';
-import { SceneBuilder } from '../scene-builder';
+import { SceneBuilder } from '../../scene-builder';
 
 @Component({
   selector: 'app-orbit-ctrl',
@@ -29,6 +29,9 @@ import { SceneBuilder } from '../scene-builder';
 })
 export class OrbitCtrlComponent {
   @ViewChild('canvas') canvasRef!: ElementRef<HTMLCanvasElement>;
+  
+  width!: number;
+  height!: number;
 
   scene!: Scene;
   camera!: PerspectiveCamera;
@@ -36,8 +39,6 @@ export class OrbitCtrlComponent {
   controls!: OrbitControls;
   composer!: EffectComposer;
 
-  width!: number;
-  height!: number;
 
   ngAfterViewInit(): void {
     const { clientHeight, clientWidth } = this.canvasRef.nativeElement;

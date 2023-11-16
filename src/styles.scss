@@ -4,8 +4,11 @@
 @tailwind utilities;
 
 @layer base {
-    h1 {
-      @apply text-cyan-400;
-    }
-    
+  h1 {
+    @apply text-2xl text-cyan-400 mb-2 mt-2;
   }
+
+  h3 {
+    @apply text-xl text-pink-400 mb-2 mt-2
+  }
+}
