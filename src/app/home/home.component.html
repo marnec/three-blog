@@ -1,0 +1,14 @@
+<div class="container my-12 mx-auto px-4 md:px-12">
+    <markdown src="/three-blog/assets/main.md"></markdown>
+  
+    <div class="grid lg:grid-cols-3 md:grid-cols-2 xs:grid-cols-1 mt-4 gap-2">
+      
+        <app-card class="col-span-1" [routerLink]="['posts', 'orbit-ctrl']">
+          <app-orbit-ctrl viewport></app-orbit-ctrl>
+          <div title>Orbit control</div>
+          <div abstract>Orbit controls are a set of tools to easily manipulate the camera position</div>
+        </app-card>
+      
+    </div>
+    
+  </div>

@@ -1,8 +1,14 @@
 import { Routes } from '@angular/router';
-import { OrbitCtrlComponent } from './scenes/orbit-ctrl/orbit-ctrl.component';
+import { PostComponent } from './post/post.component';
+import { HomeComponent } from './home/home.component';
 
-export const routes: Routes = [{
-    path: 'orbit-ctrl',
-    component: OrbitCtrlComponent
-
-}];
+export const routes: Routes = [
+  {
+    path: '',
+    component: HomeComponent,
+  },
+  {
+    path: 'posts/:id',
+    component: PostComponent,
+  },
+];

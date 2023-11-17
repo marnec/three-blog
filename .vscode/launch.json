@@ -4,6 +4,7 @@
   "configurations": [
     {
       "name": "ng serve",
+      "resolveSourceMapLocations": ["${workspaceFolder}/**", "!**/node_modules/**"],
       "type": "chrome",
       "request": "launch",
       "preLaunchTask": "npm: start",
