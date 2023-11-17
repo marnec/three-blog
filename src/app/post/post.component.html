@@ -1,8 +1,8 @@
-<div class="animated-grid grid-cols-2 gap-4" *ngIf="id">
-  <div class="col-span-1">
+<div class="animated-grid grid-cols-2 gap-4 py-5" *ngIf="id">
+  <div class="col-span-1 pl-5">
     <ng-container *ngComponentOutlet="componentType"></ng-container>
   </div>
-  <div class="col-span-1">
+  <div class="col-span-1 px-10">
     <markdown katex [src]="postPath"></markdown>
   </div>
 </div>

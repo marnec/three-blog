@@ -5,10 +5,28 @@
 
 @layer base {
   h1 {
-    @apply text-2xl text-cyan-400 mb-2 mt-2;
+    @apply text-2xl text-cyan-400 mb-3 mt-3;
   }
 
   h3 {
-    @apply text-xl text-pink-400 mb-2 mt-2
+    @apply text-xl text-pink-400 mb-3 mt-3;
   }
+
+  p {
+    @apply my-3;
+  }
+
+  em {
+    @apply text-yellow-500;
+  }
+
+  li {
+    @apply ml-3;
+    list-style-type: circle
+  }
+
+  ul {
+    @apply ml-2 pl-2;
+  }
+
 }
