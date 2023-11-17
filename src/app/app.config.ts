@@ -1,5 +1,5 @@
 import { ApplicationConfig, importProvidersFrom } from '@angular/core';
-import { RouterModule, provideRouter } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 import { routes } from './app.routes';
 import { MarkdownModule } from 'ngx-markdown';
@@ -8,7 +8,6 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    // provideRouter(routes),
     { provide: LocationStrategy, useClass: HashLocationStrategy },
     importProvidersFrom(RouterModule.forRoot(routes, { useHash: true })),
     importProvidersFrom(HttpClientModule),

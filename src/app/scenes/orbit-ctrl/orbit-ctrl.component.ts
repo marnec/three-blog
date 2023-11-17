@@ -18,7 +18,7 @@ import {
 } from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer.js';
-import { SceneBuilder } from '../../scene-builder';
+import { Theme } from '../constants';
 
 @Component({
   selector: 'app-orbit-ctrl',
@@ -46,7 +46,8 @@ export class OrbitCtrlComponent {
     this.width = clientWidth
     this.height = clientHeight
 
-    this.scene = new SceneBuilder().build();
+    this.scene = new Scene();
+    this.scene.background = Theme.backgroundColor;
 
     this.camera = new PerspectiveCamera(45, this.width / this.height, 0.01, 1000);
     this.camera.position.set(5, 5, 5);

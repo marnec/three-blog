@@ -1,17 +1,21 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule, RouterOutlet } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { MarkdownModule } from 'ngx-markdown';
-import { OrbitCtrlComponent } from '../scenes/orbit-ctrl/orbit-ctrl.component';
 import { CardComponent } from '../card/card.component';
+import { dynamicRoutes } from '../app.routes';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, RouterModule, MarkdownModule, OrbitCtrlComponent, CardComponent],
+  imports: [CommonModule, RouterModule, MarkdownModule, CardComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
+  public dynamicRoutes = dynamicRoutes;
+  public postsFolder = environment.postsFolder;
 
+  public mainPath = `/${environment.baseHref}/${environment.assetsFolder}/main.md`
 }

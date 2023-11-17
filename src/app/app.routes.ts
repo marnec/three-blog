@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
-import { PostComponent } from './post/post.component';
 import { HomeComponent } from './home/home.component';
+import { PostComponent } from './post/post.component';
+import { OrbitCtrlComponent } from './scenes/orbit-ctrl/orbit-ctrl.component';
 
 export const routes: Routes = [
   {
@@ -12,3 +13,15 @@ export const routes: Routes = [
     component: PostComponent,
   },
 ];
+
+export const dynamicRoutes = [
+  {
+    path: 'orbit-ctrl',
+    component: OrbitCtrlComponent,
+    title: 'Orbit Controls',
+    abstract: 'Orbit controls are a set of tools to easily manipulate the camera position',
+  },
+] as const;
+
+export type PostName = (typeof dynamicRoutes)[number]['path'];
+export type PostComponentType = (typeof dynamicRoutes)[number]['component'];

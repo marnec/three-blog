@@ -1,5 +1,5 @@
 import { Camera, PerspectiveCamera } from 'three';
-import { CameraData } from './constants';
+import { CameraData } from './scenes/constants';
 
 export class CameraBuilder {
   camera!: Camera;
