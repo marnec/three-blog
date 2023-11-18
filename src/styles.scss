@@ -5,7 +5,11 @@
 
 @layer base {
   h1 {
-    @apply text-2xl text-cyan-400 mb-3 mt-3;
+    @apply text-3xl text-cyan-400 mb-3 mt-3;
+  }
+
+  h2 {
+    @apply text-2xl text-green-400 mb-3 mt-3;
   }
 
   h3 {
@@ -13,7 +17,11 @@
   }
 
   p {
-    @apply my-3;
+    @apply my-5;
+
+    code {
+      @apply bg-slate-400 text-slate-50 px-1 rounded-sm
+    }
   }
 
   em {
@@ -21,12 +29,28 @@
   }
 
   li {
-    @apply ml-3;
-    list-style-type: circle
+    @apply ml-3 marker:text-gray-400;
   }
 
   ul {
     @apply ml-2 pl-2;
+
+    li {
+      list-style-type: circle;
+    }
   }
 
+  ol {
+    @apply ml-2 pl-2;
+
+    li {
+      list-style-type: lower-roman;
+    }
+  }
+
+  // pre {
+  //   code { 
+  //     @apply bg-slate-700
+  //   }
+  // }
 }

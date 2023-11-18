@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { PostComponent } from './post/post.component';
 import { OrbitCtrlComponent } from './scenes/orbit-ctrl/orbit-ctrl.component';
+import { PlotComponent } from './plot/plot.component';
 
 export const routes: Routes = [
   {
@@ -12,6 +13,10 @@ export const routes: Routes = [
     path: 'posts/:id',
     component: PostComponent,
   },
+  {
+    path: 'test',
+    component: PlotComponent
+  }
 ];
 
 export const dynamicRoutes = [
