@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Plot } from 'threeplot';
+import { ScatterPlot } from 'threeplot';
+import { Vector3 } from 'three';
 
 @Component({
   selector: 'app-plot',
@@ -13,7 +14,7 @@ export class PlotComponent implements AfterViewInit {
   @ViewChild('canvas') canvas!: ElementRef<HTMLCanvasElement>;
 
   ngAfterViewInit(): void {
-    const plot = new Plot(10, 10, 10);
+    const plot = new ScatterPlot(10, 10, 10).withData([new Vector3()]);
     plot.showOn(this.canvas.nativeElement);
   }
 }
